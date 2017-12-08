@@ -4,6 +4,7 @@ $end:rgba(58,210,11,0.5);;
 body{
   font-family:sans-serif;
   background-image: -moz-linear-gradient(30deg, $start 0%, $end 100%);
+	background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,$start), color-stop(100%,$end));
 	background: -webkit-linear-gradient(30deg, $start 0%,$end 100%);
 	background: -o-linear-gradient(30deg, $start 0%,$end 100%);
 	background: -ms-linear-gradient(30deg, $start 0%,$end 100%);
