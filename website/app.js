@@ -4,9 +4,7 @@
   };
   
   AddressBook.prototype = {
-    //default functions
     data:[
-      //add data here
     ],
     searchResults:[
       
@@ -20,8 +18,6 @@
       return this;
     },
     save:function(){
-      //save to local storage. This isn't hugely necessary
-      
     },
     returnAll:function(){
       return this.data;
@@ -68,16 +64,15 @@
  global.AddressBook = $ab = AddressBook;
 })(window);
 
-if(!window.contactList){ //check if we already have a contact list
+if(!window.contactList){ 
   window.contactList=$ab();
  }
 
 var form  = document.getElementById('contact');
 form.addEventListener('submit', function(){
-  if(!window.contactList){ //check if we already have a contact list
+  if(!window.contactList){ 
   window.contactList=$ab(form.person.value,form.phone.value,form.email.value);
  } else {
- //saves new values rather than deleting old ones as well
    contactList.addNewContact(form.person.value,form.phone.value,form.email.value);
  }
  
@@ -109,12 +104,11 @@ searchForm.addEventListener('submit', function(){
   document.getElementById('results').innerHTML += '<div class="contact-item">There are no results for this name</div><hr>';
  }
  
- //do something with the results
  event.preventDefault();
 });
 
 document.getElementById('js-show-all').addEventListener('click', function(){
- if(window.contactList){ //check if we already have a contact list
+ if(window.contactList){ 
     document.getElementById('show-panel').innerHTML = '';
   var contacts = contactList.returnAll();
    console.log(contacts);
