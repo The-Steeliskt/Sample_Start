@@ -1,4 +1,4 @@
-;(function(global){
+function(global){
     var AddressBook = function(name,phone,email){
       return new AddressBook.init(name,phone,email);
     };
